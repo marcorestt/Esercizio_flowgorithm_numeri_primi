@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Utente"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-02 09:41:28 "/>
+        <attribute name="created" value="VXRlbnRlO0RFU0tUT1AtTDJEQ1VQVTsyMDI2LTEwLTAyOyIwOTozMTo1NiAiOzI5MTU="/>
+        <attribute name="edited" value="VXRlbnRlO0RFU0tUT1AtTDJEQ1VQVTsyMDI2LTEwLTAyOyIwOTo0MToyOCAiOzE7MzAyMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, primo" type="Integer" array="False" size=""/>
+            <output expression="&quot;Inserisci un numero:&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="primo" expression="1"/>
+            <if expression="n&lt;2">
+                <then>
+                    <assign variable="primo" expression="0"/>
+                </then>
+                <else>
+                    <assign variable="i" expression="2"/>
+                    <while expression="i*i &lt;= n &amp;&amp; primo == 1">
+                        <if expression="n % i == 0">
+                            <then>
+                                <assign variable="primo" expression="0"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="i" expression="i+1"/>
+                    </while>
+                </else>
+            </if>
+            <if expression="primo=1">
+                <then>
+                    <output expression="&quot;&#232; un numero primo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;non &#232; un numero primo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
